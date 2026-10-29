@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0b1120">
+  <title>Cobrinha | Klayver Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <main class="game">
+    <header>
+      <h1>🐍 Cobrinha</h1>
+      <p class="subtitle">Coma as maçãs, não bata em nada!</p>
+    </header>
+
+    <section class="scores">
+      <div class="card">
+        <span class="label">Pontos</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="card">
+        <span class="label">Nível</span>
+        <strong id="level">1</strong>
+      </div>
+      <div class="card best">
+        <span class="label">Recorde</span>
+        <strong id="best">0</strong>
+      </div>
+    </section>
+
+    <section class="board">
+      <canvas id="canvas" width="400" height="400"></canvas>
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">Pronto?</h2>
+        <p id="overlay-text">Use as setas, WASD ou deslize o dedo</p>
+        <button id="start-btn">▶ Jogar</button>
+      </div>
+    </section>
+
+    <p class="hint"><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> ou <kbd>WASD</kbd> para mover · <kbd>Espaço</kbd> pausa</p>
+
+    <nav class="controls" aria-label="Controles">
+      <button class="up" data-dir="up" aria-label="Cima">▲</button>
+      <button class="left" data-dir="left" aria-label="Esquerda">◀</button>
+      <button class="down" data-dir="down" aria-label="Baixo">▼</button>
+      <button class="right" data-dir="right" aria-label="Direita">▶</button>
+    </nav>
+
+    <footer>feito por <a href="https://github.com/klayverdev" target="_blank" rel="noopener">klayverdev</a></footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
